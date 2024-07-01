@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capella | Shoes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="/css/style3.css">
+    <link rel="stylesheet" href="/css/style7.css">
+
+</head>
+
+
+<body>
+    <nav id="navegacion" class="bg-teal-900">
+
+
+    </nav>
+  
+  <div class="titulo flex justify-center">
+    <select class="point">
+      <option class="text-black" disabled selected value="">Precios</option>
+    </select>
+
+    <span>
+    <img src="/img/color2-8.png" alt="" class="h-36 mx-auto block border-2 border-b-slate-900 border-t-slate-900 rounded-full">
+    </span>
+    
+    <select class="point2">
+      <option class="text-black" disabled selected value="">Categoria</option>
+    </select>
+  </div>
+
+
+
+  <main>
+    <div id="products-container">
+    </div>
+  </main>
+
+
+  <footer id="aqui" class="mx-auto p-4 pt-6 md:p-6 lg:p-12 bg-teal-950">
+    
+
+  </footer>  
+
+
+
+  <script src="index.js"></script>
+  <script src="../components/nav.js"></script>
+  <script>
+      // Seleccionamos el botón hamburguesa y el menú
+  const hamburger = document.querySelector('.hamburger');
+  const menu = document.querySelector('.menu');
+
+  // Agregamos un evento de clic al botón hamburguesa
+  hamburger.addEventListener('click', () => {
+    // Mostramos el menú
+    menu.classList.toggle('show');
+    // Cambiamos el estado del botón hamburguesa
+    hamburger.classList.toggle('show');
+  });
+
+  // Agregamos un evento de clic fuera del menú para ocultarlo
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove('show');
+      hamburger.classList.remove('show');
+    }
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.contenedor {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.fila-impar {
+  background-color: #fff;
+}
+
+.fila-par {
+  background-color: #f9f9f9;
+}
+
+.tabla img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.contenedor {
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla th, .tabla td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabla th {
+  background-color: #f0f0f0;
+}
+
+.editar, .eliminar {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.editar:hover, .eliminar:hover {
+  background-color: #3e8e41;
+}
+
+/* formulario */
+
+/* style.css */
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.boton {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#boton-desplegar {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#boton-desplegar:hover {
+  background-color: #3e8e41;
+}
+
+#formulario {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.escondido {
+  display: none;
+}
+
+#formulario.visible {
+  display: block;
+}
+
+input[type="text"], input[type="number"], input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+button[type="button"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button[type="button"]:hover {
+  background-color: #3e8e41;
+}
+
+
+.nav-bar {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-bar li {
+  margin-right: 20px;
+}
+
+.nav-bar a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-bar a:hover {
+  color: #ccc;
+}
+
+.nav-bar a::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.2s ease;
+}
+
+.nav-bar a:hover::before {
+  width: 100%;
+}
+
+/* Estilos responsivos */
+
+/* Pantalla pequeña (menos de 768px) */
+@media (max-width: 767px) {
+ .nav-bar ul {
+    flex-direction: column;
+  }
+ .nav-bar li {
+    margin-right: 0;
+  }
+ .nav-bar a {
+    font-size: 16px;
+  }
+}
+
+/* Pantalla mediana (entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+ .nav-bar ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+ .nav-bar li {
+    margin-right: 10px;
+  }
+ .nav-bar a {
+    font-size: 18px;
+  }
+}
+
+/* Pantalla grande (mayor de 1024px) */
+@media (min-width: 1024px) {
+ .nav-bar ul {
+    flex-direction: row;
+  }
+ .nav-bar li {
+    margin-right: 20px;
+  }
+ .nav-bar a {
+    font-size: 20px;
+  }
+}

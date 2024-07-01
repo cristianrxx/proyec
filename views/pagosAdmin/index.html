@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/css/style-4.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+    
+      <nav class="nav-bar">
+        <a href="/admin/">Productos</a>
+        <a href="/historial/">Historial de pagos</a>
+        <a href="/pagosAdmin/">Pagos por revisar</a>
+      </nav>
+  
+  <h1>Pagos por revisar</h1>
+  
+        <table class="tabla">
+            <thead>
+              <tr>
+                <th>Datos del producto:</th>
+                <th>Cedula:</th>
+                <th>Telefono:</th>
+                <th>Banco</th>
+                <th>Numero de referencia</th>
+                <th>Aceptar</th>
+                <th>Rechazar</th>
+              </tr>
+
+              
+              <tbody id="pagos-container"></tbody>
+            </thead>
+          </table>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+.imagen{
+    background-image: url(/img/banner.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    height:600px;
+    margin-bottom: 10rem ; 
+    top: 0;   
+
+}
+.banner{
+    background-color: #0e0c0ca6;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.logo{
+    width: 500px;
+    margin-left: 2rem;
+}
+.boton-container{
+    margin-left: 40rem;
+}
+.boton{
+    margin-right: 10px;
+}
+.ban-p{
+    color: white;
+    margin-top: 10rem;
+}
+.x{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.b{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+
+
+.slider {
+    width: 85vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 15rem;
+    margin-top: 15rem;
+  }
+  
+  .slider .slider-track {
+    display: flex;
+    animation: scroll 80s linear infinite;
+    width: calc(150px * 52); /* Assuming 52 images */
+  }
+  
+  .slide img{
+    height: 100%;
+    width: 100%;
+    margin: 10px;
+  }
+  
+  /* Option 1: Fixed Width */
+  .slider .slide img {
+    width: 120px; /* Adjust as needed */
+  }
+  
+  /* Option 2: Maintain Aspect Ratio */
+  .slider .slide img {
+    object-fit: cover;
+  }
+  
+  @keyframes scroll {
+    0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-150px * (var(--num-slides) - 1)));
+      }
+    }
+   
+  :root {
+        --num-slides: 10; /* Cambia este valor según el número de slides que tengas */
+      }
+
+
+      .banner1 {
+        background-image: linear-gradient(to bottom, #4686813a, #00837856);
+        background-size: 100% 250px;
+        background-position: 0% 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 25rem
+      }
+      
+      .banner-content {
+        text-align: center;
+        color: #000000;
+      }
+      
+      .banner-content h2 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      }
+      
+      .banner-content p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+      }
+      
+      .banner-content a {
+        background-color: #007a83c9;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      
+      .banner-content a:hover {
+        background-color: #0d6456;
+        transition: background-color 0.3s ease;
+      }
+      
+.text-t{
+  font-size: 80px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration:overline;
+  color: #000000;
+}

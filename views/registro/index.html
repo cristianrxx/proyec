@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>    
+    <link rel="stylesheet" href="/css/style7.css">
+    <title>Capella | Shoes</title>
+
+</head>
+
+<body>
+     <nav id="navegacion" class="bg-teal-900">
+
+    </nav>
+
+
+    <div id="notificacion" class="fixed top-20 left-0 right-0">
+
+    </div>
+
+    <div class="pt-2 h-screen px-4 mb-24 flex max-w-7x1 mt-10 mx-auto justify-center items-center">
+        <form id="formulario" class="flex flex-col gap-4 bg-teal-900 p-4  rounded-2xl text-lg lg:w-2/4 shadow-l">
+            <div class="flex flex-col gap-2">
+                <label for="name-input" class="font-bold text-white">Nombre 
+                    <span class="text-red-500">*</span>
+                </label>
+                <input 
+                type="text"
+                id="name-input"
+                autocomplete="off"
+                placeholder="Cristian Rivero"
+                class="rounde-lg p-2 focus:outline-blue-600" >
+                <p class="text-xs text-white">Este campo es obligatorio</p>
+           </div>
+           <div class="flex flex-col gap-2">
+               <label for="email-input" class="font-bold text-white">Email 
+                    <span class="text-red-500">*</span>
+               </label>
+               <input 
+               type="email"
+               id="email-input"
+               autocomplete="off"
+               placeholder="example@gmail.com"
+               class="rounde-lg p-2 focus:outline-blue-600" >
+               <p class="text-xs text-white">El correo es obligatorio</p>
+           </div>
+
+           <div class="flex flex-col gap-2">
+               <label for="password-input" class="font-bold text-white">Contraseña
+                    <span class="text-red-500">*</span>
+               </label>
+               <input 
+               type="password"
+               id="password-input"
+               autocomplete="off"
+               class="rounde-lg p-2 focus:outline-blue-600" >
+               <p class="text-xs text-white">Debe tener al menos una letra<br>Debe tener al menos un número<br>Debe tener al menos una mayúscula<br>Debe tener entre 8 y 16 carácteres<br>Debe tener al menos un carácter especial</p>
+           </div>
+
+           <div class="flex flex-col gap-2">
+            <label for="match-input" class="font-bold text-white">Confirmar contraseña
+                 <span class="text-red-500">*</span>
+            </label>
+            <input 
+            type="password"
+            id="match-input"
+            autocomplete="off"
+            class="rounde-lg p-2 focus:outline-blue-600" >
+            <p class="text-xs text-white">Debe coincidir con la contraseña anterior</p>
+        </div>
+
+        <button id="form-btn" disabled class=" bg-[#0e7f8d] ml-20 mr-20 px-4 font-bold text-white hover:bg-teal-50 hover:text-black rounded-3xl py-2 ease-in-out disabled:cursor-not-allowed " >Registrar</button>
+        </form>    
+    </div>
+
+
+    <footer id="aqui" class="mx-auto p-4 pt-6 md:p-6 lg:p-12 bg-teal-950">
+    
+    </footer>  
+
+
+    <script src="../components/nav.js"></script>
+    <script src="../components/notificaciones.js" type="module"></script>
+    <script src="index.js" type="module"></script>
+    <script>
+        // Seleccionamos el botón hamburguesa y el menú
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+    
+    // Agregamos un evento de clic al botón hamburguesa
+    hamburger.addEventListener('click', () => {
+      // Mostramos el menú
+      menu.classList.toggle('show');
+      // Cambiamos el estado del botón hamburguesa
+      hamburger.classList.toggle('show');
+    });
+    
+    // Agregamos un evento de clic fuera del menú para ocultarlo
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+        menu.classList.remove('show');
+        hamburger.classList.remove('show');
+      }
+    });
+    </script>
+</body>
+</html>

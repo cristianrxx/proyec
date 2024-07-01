@@ -1,0 +1,62 @@
+
+  table {
+    display: inline-block;
+    width: 45%;
+    margin: 10px;
+    vertical-align: top;
+    min-height: 200px; 
+  }
+  
+  thead {
+    background-color: #007a83c9;
+    color: #ffffff; 
+    
+  }
+  
+  th {
+    padding: 0.5rem 1rem;
+    text-align: left;
+  }
+  
+  tbody {
+    background-color: #ffffff; 
+  }
+  
+  tr {
+    border-bottom: 1px solid #cccccc; 
+  }
+  
+  td {
+    padding: 0.5rem 1rem;
+  }
+  
+
+  #pagos-1 {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.26); 
+    border-radius: 0.5rem; 
+  }
+  
+  #pagos-1 th {
+    background-color: #00698f; 
+  }
+  
+  #pagos-1 td {
+    color: #505050;
+    font-size: 12px;
+  }
+  
+
+  #pagos-2 {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
+    border-radius: 0.5rem; 
+  }
+  
+  #pagos-2 th {
+    background-color: #008cba; 
+  }
+  
+  #pagos-2 td {
+    color: #505050;
+  }
+
+
