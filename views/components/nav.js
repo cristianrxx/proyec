@@ -276,7 +276,7 @@ const crearNavUsuario = ()=>{
   <span class="bar"></span>
   </button>
   <div class="flex items-center justify-between pb-5 mx-auto ">
-  <a href="/funcion/">
+  <a href="/productos/">
   <img src="/img/blanco 2-8.png" alt="logo" class="mt-2.5 w-100 h-12 ml-5">
   </a>
 
@@ -285,7 +285,7 @@ const crearNavUsuario = ()=>{
 <nav class="menu md:hidden">
   <ul>
 <a href="/carrito/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Carrito</a>
-  <a href="/dashboard/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Pagos</a>
+  <a href="/historial/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Pagos</a>
   <a id="btn-x" class=" cursor-pointer py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Cerrar sesión </a>
   </ul>
 </nav>
@@ -301,7 +301,7 @@ const crearNavUsuario = ()=>{
       <a href="/carrito/"
           class= "py-2 px-4 rounded-lg text-white hover:bg-teal-50 hover:text-black font-bold transition ease-in-out">Carrito</a>
 
-          <a href="/dashboard/"
+          <a href="/historial/"
           class= "py-2 px-4 rounded-lg text-white hover:bg-teal-50 hover:text-black font-bold transition ease-in-out">Pagos</a>
 
       
@@ -327,9 +327,9 @@ footer.innerHTML=`
     <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 border-r">
       <h5 class="uppercase tracking-wide font-bold mb-2 text-black">Enlaces rápidos</h5>
       <ul class="list-none mb-4">
-        <li><a href="/funcion/" class="text-white hover:text-gray-900 transition ease-in-out">Inicio</a></li>
+        <li><a href="/productos/" class="text-white hover:text-gray-900 transition ease-in-out">Inicio</a></li>
         <li><a href="/carrito/" class="text-white hover:text-gray-900 transition ease-in-out">Carrito</a></li>
-        <li><a href="/dashboard/" class="text-white hover:text-gray-900 transition ease-in-out">Dashboard</a></li>
+        <li><a href="/historial/" class="text-white hover:text-gray-900 transition ease-in-out">Dashboard</a></li>
       </ul>
     </div>
     <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 border-r">
@@ -369,7 +369,7 @@ const crearNavProducto = ()=>{
   <span class="bar"></span>
   </button>
   <div class="flex items-center justify-between pb-5 mx-auto ">
-  <a href="/funcion/">
+  <a href="/productos/">
   <img src="/img/blanco 2-8.png" alt="logo" class="mt-2.5 w-100 h-12 ml-5">
   </a>
 
@@ -377,9 +377,9 @@ const crearNavProducto = ()=>{
 <!-- El menú -->
 <nav class="menu md:hidden">
   <ul>
-  <a href="/funcion/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Inicio</a>
+  <a href="/productos/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Inicio</a>
 <a href="/carrito/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Carrito</a>
-  <a href="/dashboard/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Pagos</a>
+  <a href="/historial/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Pagos</a>
   <a id="btn-x" class=" cursor-pointer py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Cerrar sesión </a>
   </ul>
 </nav>
@@ -392,7 +392,7 @@ const crearNavProducto = ()=>{
   <!--menu pc-->
   
   <div class="hidden md:flex flex-row gap-4 ">
-    <a href="/funcion/"
+    <a href="/productos/"
       id="btn-x"
           class="py-2 px-4 rounded-lg hover:bg-teal-50 hover:text-black bg:text-black font-bold text-white transition ease-in-out">
          Inicio</a>
@@ -400,7 +400,7 @@ const crearNavProducto = ()=>{
       <a href="/carrito/"
           class= "py-2 px-4 rounded-lg text-white hover:bg-teal-50 hover:text-black font-bold transition ease-in-out">Carrito</a>
 
-          <a href="/dashboard/"
+          <a href="/historial/"
           class= "py-2 px-4 rounded-lg text-white hover:bg-teal-50 hover:text-black font-bold transition ease-in-out">Pagos</a>
 
       
@@ -426,9 +426,9 @@ footer.innerHTML=`
     <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 border-r">
       <h5 class="uppercase tracking-wide font-bold mb-2 text-black">Enlaces rápidos</h5>
       <ul class="list-none mb-4">
-        <li><a href="/funcion/" class="text-white hover:text-gray-900 transition ease-in-out">Inicio</a></li>
+        <li><a href="/productos/" class="text-white hover:text-gray-900 transition ease-in-out">Inicio</a></li>
         <li><a href="/carrito/" class="text-white hover:text-gray-900 transition ease-in-out">Carrito</a></li>
-        <li><a href="/dashboard/" class="text-white hover:text-gray-900 transition ease-in-out">Dashboard</a></li>
+        <li><a href="/historial/" class="text-white hover:text-gray-900 transition ease-in-out">Dashboard</a></li>
       </ul>
     </div>
     <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 border-r">
@@ -468,7 +468,7 @@ const crearNavCarrito = ()=>{
   <span class="bar"></span>
   </button>
   <div class="flex items-center justify-between pb-5 mx-auto ">
-  <a href="/funcion/">
+  <a href="/productos/">
   <img src="/img/blanco 2-8.png" alt="logo" class="mt-2.5 w-100 h-12 ml-5">
   </a>
 
@@ -476,8 +476,8 @@ const crearNavCarrito = ()=>{
 <!-- El menú -->
 <nav class="menu md:hidden">
   <ul>
-  <a href="/funcion/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Inicio</a>
-  <a href="/dashboard/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Pagos</a>
+  <a href="/productos/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Inicio</a>
+  <a href="/historial/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Pagos</a>
   <a id="btn-x" class=" cursor-pointer py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Cerrar sesión </a>
   </ul>
 </nav>
@@ -490,12 +490,12 @@ const crearNavCarrito = ()=>{
   <!--menu pc-->
   
   <div class="hidden md:flex flex-row gap-4 ">
-    <a href="/funcion/"
+    <a href="/productos/"
       id="btn-x"
           class="py-2 px-4 rounded-lg hover:bg-teal-50 hover:text-black bg:text-black font-bold text-white transition ease-in-out">
          Inicio</a>
 
-          <a href="/dashboard/"
+          <a href="/historial/"
           class= "py-2 px-4 rounded-lg text-white hover:bg-teal-50 hover:text-black font-bold transition ease-in-out">Pagos</a>
 
       
@@ -521,9 +521,9 @@ footer.innerHTML=`
     <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 border-r">
       <h5 class="uppercase tracking-wide font-bold mb-2 text-black">Enlaces rápidos</h5>
       <ul class="list-none mb-4">
-        <li><a href="/funcion/" class="text-white hover:text-gray-900 transition ease-in-out">Inicio</a></li>
+        <li><a href="/productos/" class="text-white hover:text-gray-900 transition ease-in-out">Inicio</a></li>
         <li><a href="/carrito/" class="text-white hover:text-gray-900 transition ease-in-out">Carrito</a></li>
-        <li><a href="/dashboard/" class="text-white hover:text-gray-900 transition ease-in-out">Dashboard</a></li>
+        <li><a href="/historial/" class="text-white hover:text-gray-900 transition ease-in-out">Dashboard</a></li>
       </ul>
     </div>
     <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 border-r">
@@ -563,7 +563,7 @@ const crearNavDashboard= ()=>{
   <span class="bar"></span>
   </button>
   <div class="flex items-center justify-between pb-5 mx-auto ">
-  <a href="/funcion/">
+  <a href="/productos/">
   <img src="/img/blanco 2-8.png" alt="logo" class="mt-2.5 w-100 h-12 ml-5">
   </a>
 
@@ -571,7 +571,7 @@ const crearNavDashboard= ()=>{
 <!-- El menú -->
 <nav class="menu md:hidden">
   <ul>
-  <a href="/funcion/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Inicio</a>
+  <a href="/productos/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Inicio</a>
 <a href="/carrito/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Carrito</a>
   <a id="btn-x" class=" cursor-pointer py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Cerrar sesión </a>
   </ul>
@@ -585,7 +585,7 @@ const crearNavDashboard= ()=>{
   <!--menu pc-->
   
   <div class="hidden md:flex flex-row gap-4 ">
-    <a href="/funcion/"
+    <a href="/productos/"
       id="btn-x"
           class="py-2 px-4 rounded-lg hover:bg-teal-50 hover:text-black bg:text-black font-bold text-white transition ease-in-out">
          Inicio</a>
@@ -615,9 +615,9 @@ footer.innerHTML=`
     <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 border-r">
       <h5 class="uppercase tracking-wide font-bold mb-2 text-black">Enlaces rápidos</h5>
       <ul class="list-none mb-4">
-        <li><a href="/funcion/" class="text-white hover:text-gray-900 transition ease-in-out">Inicio</a></li>
+        <li><a href="/productos/" class="text-white hover:text-gray-900 transition ease-in-out">Inicio</a></li>
         <li><a href="/carrito/" class="text-white hover:text-gray-900 transition ease-in-out">Carrito</a></li>
-        <li><a href="/dashboard/" class="text-white hover:text-gray-900 transition ease-in-out">Dashboard</a></li>
+        <li><a href="/historial/" class="text-white hover:text-gray-900 transition ease-in-out">Dashboard</a></li>
       </ul>
     </div>
     <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 border-r">
@@ -658,16 +658,16 @@ if(window.location.pathname === '/'){
 
 }else if(window.location.pathname === '/registro/'){
   crearNavRegistro()
-}else if(window.location.pathname === '/funcion/'){
+}else if(window.location.pathname === '/seleccionar/'){
   crearNavUsuario()
 
-}else if(window.location.pathname === '/producto/'){
+}else if(window.location.pathname === '/productos/'){
   crearNavProducto()
 
 }else if(window.location.pathname === '/carrito/'){
   crearNavCarrito()
 
-}else if(window.location.pathname === '/dashboard/'){
+}else if(window.location.pathname === '/historial/'){
   crearNavDashboard()
 }
 

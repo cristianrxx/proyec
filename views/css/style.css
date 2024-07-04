@@ -20,11 +20,15 @@
     margin-left: 2rem;
 }
 .boton-container{
-    margin-left: 40rem;
+  display: flex;  
+  justify-content: right;
+  margin-right: 15rem;
 }
 .boton{
-    margin-right: 10px;
+    margin-right: 30px;
 }
+
+
 .ban-p{
     color: white;
     margin-top: 10rem;
@@ -37,7 +41,22 @@
     font-weight: bold;
     font-size: 2rem;
 }
-
+@media (max-width: 768px){
+  .boton-container{
+    display: flex;  
+    justify-content: right;
+    margin-right: 2rem;
+    margin-top: 15px;
+  }
+  .ban-p{
+    color: white;
+    margin-top: 3rem;
+}
+.b{
+  font-weight: bold;
+  font-size: 1rem;
+}
+}
 
 
 .slider {

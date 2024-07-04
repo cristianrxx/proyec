@@ -4,13 +4,14 @@ const pagosContainer = document.getElementById('pagos-container');
 
   document.addEventListener('DOMContentLoaded',async()=>{
     try {
-      const mostrarPendiente= await axios.get('/api/pagos/mostrar')
+      const mostrarPendiente= await axios.get('/api/pagos/pagosPendientes')
       //console.log(mostrarPendiente);
       mostrarPendiente.data.forEach(element => {
         let tr=document.createElement('tr')
         let productos=element.pagos.productos
         for(i in productos){
           let productoItem=productos[i]
+
           tr.innerHTML=`
           <!-- Contenido del modal -->
           <div id="default-modal" tabindex="-1" class="hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full bg-gray-500 bg-opacity-50 overflow-y-auto overflow-x-hidden">
@@ -22,10 +23,10 @@ const pagosContainer = document.getElementById('pagos-container');
                 
                 
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                      Modelo de zapatos: ${productoItem.nombre}
+                      Modelo de zapatos: ${productoItem.producto.nombre}
                     </p>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                      Cantidad: ${productoItem.cantidad}
+                      Cantidad: ${productoItem.producto.cantidad}
                     </p>
                   
              
@@ -80,28 +81,26 @@ const pagosContainer = document.getElementById('pagos-container');
       console.log(error);
     }
   })
-
   async function aceptar(_id){
-  
     try {
-      const aceptar= await axios.post('/api/pagos/aceptar',{
+      const aceptar = await axios.post('/api/pagos/aceptar',{
         id:_id
       })
       console.log(aceptar);
+      alert('Pago verificado con exito')
+      window.location.reload(); // Add this line to refresh the page
     } catch (error) {
       console.log(error);
     }
-
-}   
-
-
+  }
 async function rechazar(_id) {
   try {
     const rechazar = await axios.post('/api/pagos/rechazar', {
       id: _id
     })
     console.log(rechazar);
-
+    alert('Pago eliminado')
+    window.location.reload();
   } catch (error) {
     console.log(error);
   }

@@ -18,22 +18,48 @@
 
 
     </nav>
-  
+    <p id="mensaje-pago"></p>
 
     <table class="tabla">
-        <thead>
-          <tr>
-            <th>Producto</th>
-          </tr>
-        </thead>
-        <tbody id="product-list">
-            
-        </tbody>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Color</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+        </tr>
+      </thead>
+      <tbody id="productosContenedor">
+        <!-- Rows will be appended here -->
+      </tbody>
+    </table>
+    
 
-      </table> 
-      <div class="pagar-d">
-      <button id="pagar-btn" class="bg-teal-900 hover:bg-teal-400 py-2 px-4 text-white font-bold rounded">Pagar</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="flex flex-row justify-center gap-5">
+        <div class="pagar-d">
+          <button id="pagar-btn" class="bg-teal-900 hover:bg-teal-400 py-2 px-4 text-white font-bold rounded">Pagar</button>
+          </div>
+          <div class="vaciarBtn">
+            <button id="vaciar-btn" class="bg-teal-900 hover:bg-teal-400 py-2 px-4 text-white font-bold rounded">Vaciar carrito</button>
+            </div>
       </div>
+     
       <div id="payment-form" class="hidden formulario-pago">
         <form id="form-datos" class="formulario--y bg-teal-900 rounded-2xl gap-2 p-4 items-center lg:w-2/6 shadow-l mb-14">
 

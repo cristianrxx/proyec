@@ -1,10 +1,9 @@
-
+const vaciarBtn = document.getElementById('vaciar-btn');
+let  montoTotal=document.querySelector('#total-amount')
 const productos = JSON.parse(localStorage.getItem('productos'));
-let montoTotal=0
 let infoProductos = [];
 
 if (productos) {
-  const productList = document.getElementById('product-list');
   productos.forEach((producto) => {
     montoTotal=montoTotal+producto.precio
     const productItem = document.createElement('td');
@@ -60,22 +59,19 @@ if (productos) {
   });
 }
 
-console.log(infoProductos);
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const productList = document.getElementById('productosContenedor');
 
+    const carrito = await axios.get('/api/users/carritoId');
+    console.log(carrito);
+    montoTotal=carrito.data.total
 
-const pagarBtn = document.getElementById('pagar-btn');
-const paymentForm = document.getElementById('payment-form');
-
-pagarBtn.addEventListener('click', () => {
-  paymentForm.classList.remove('hidden');
-  console.log(montoTotal);
-
-});    
-
-const formPago = document.getElementById('form-datos');
+    carrito.data.mostrar.forEach(elemento => {
+      const formPago = document.getElementById('form-datos');
 
 formPago.innerHTML = 
-`<label for="">C.D.I:</label>
+`<label for="">cedula:</label>
 <input type="text" id="cdi" name="cdi"><br><br>
 <label for="">Numero de telefono:</label>
 <input type="text" id="tlf" name="tlf"><br><br>
@@ -111,8 +107,8 @@ class="w-52">
   <option value="0178">N58 BANCO DIGITAL BANCO MICROFINANCIERO S A</option>
 </select><br><br>
 <label for="card-number">Numero de referencia(ultimos 8 digitos):</label>
-<input type="number" id="card-number" name="card-number"><br><br>
-<label for="total-amount">Total a pagar: <span id="total-amount" class='mostrarPago'>${montoTotal}$</span></label><br><br>
+<input type="text" id="card-number" name="card-number"><br><br>
+<label for="total-amount">Total a pagar: <span id="total-amount" class='mostrarPago'>${carrito.data.total}</span></label><br><br>
 <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Realizar pago</button>
 `
 const botonPago = formPago.querySelector('button[type="submit"]');
@@ -126,48 +122,96 @@ botonPago.addEventListener('click', async (e) => {
   const totalAmount = document.getElementById('total-amount').textContent.replace('$', '');
   const token = localStorage.getItem('token'); 
 
- if (!cdi || !tlf || !banco || !cardNumber || !totalAmount) {
-   alert('Por favor, asegúrate de que todos los campos estén llenos antes de continuar.');
-   return;
- }
-  let productos=localStorage.getItem('productos')
- console.log(productos);
-
-
- try {
-  const validatetoken= await axios.get('/api/users/verificar')
+  if (!cdi || !tlf || !banco || !cardNumber || !totalAmount) {
+    alert('Por favor, asegúrate de que todos los campos estén llenos antes de continuar.');
+    return;
+  }
 
   try {
-    const pago= await axios.post('/api/pagos/consultar',{
-      
-      idUser:validatetoken.data.id,
-      cdi:cdi,
-      tlf:tlf,
-      banco:banco.value,
-      cardNumber:cardNumber,
-      totalAmount:totalAmount,
-      productos:infoProductos
-    })
-    //console.log(pago);
+    try {
+      const pago = await axios.post('/api/pagos/consultar',{
+        cdi: cdi,
+        tlf: tlf,
+        banco: banco.value,
+        cardNumber: cardNumber,
+        totalAmount: totalAmount,
+        productos: carrito.data.mostrar
+      })
 
-    localStorage.removeItem(productos)
+      const mensajePagoContainer = document.querySelector('.mensaje-pago-container');
+      const mensajePago = document.getElementById('mensaje-pago');
+      mensajePago.textContent = 'Pago realizado con éxito, recuerde vaciar del carrito';
+      mensajePagoContainer.classList.add('mostrar');
+
+      // Quitar la clase después de 2 segundos
+      setTimeout(() => {
+        mensajePagoContainer.classList.add('desaparecer');
+        setTimeout(() => {
+          mensajePagoContainer.classList.remove('mostrar', 'desaparecer');
+        }, 2000);
+      }, 2000);
+
+
+    } catch (error) {
+      console.log(error);
+    }
+
+  } catch (error) {
+    console.log(error);
+  }
+})
+      console.log(elemento.producto);
+      montoTotal.innerHTML=`$${carrito.data.total}`
+      let tr = document.createElement('tr');
+      tr.className = '';
+
+      tr.innerHTML = `
+        <td class='text-center'>${elemento.producto.nombre}</td>
+        <td class='text-center'>${elemento.producto.color}</td>
+        <td class='text-center'>${elemento.producto.precio}</td>
+        <td class='text-center'>${elemento.producto.cantidad}</td>
+      `;
+
+      productList.appendChild(tr);
+    });
   } catch (error) {
     console.log(error);
   }
 
-  console.log(validatetoken);
+  try {
+    const verificar = await axios.get('/api/users/verificar');
+    if (verificar.data.validate == false) {
+      window.location.href = '/login/';
+    }
+    console.log(verificar);
+  } catch (error) {
+    console.log(error);
+  }
+});
+console.log(infoProductos);
 
-  if(validatetoken.data.validateToken==false){
-    localStorage.removeItem('token')
-    alert('expiro')
-    window.location.href='/login/'
+
+const pagarBtn = document.getElementById('pagar-btn');
+const paymentForm = document.getElementById('payment-form');
+
+pagarBtn.addEventListener('click', () => {
+  paymentForm.classList.remove('hidden');
+  console.log(montoTotal);
+
+});    
+
+
+
+
+
+
+vaciarBtn.addEventListener('click',async ()=>{
+
+  try {
+    const vaciarCarrito=await axios.post('/api/users/vaciarCarrito')
+    alert(vaciarCarrito.data.message)
+  } catch (error) {
+    console.log(error);
   }
 
-} catch (error) {
-  console.log(error);
-}
-
-
-
-});
-
+})

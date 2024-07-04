@@ -12,7 +12,6 @@
 
 .tabla th {
   padding: 10px;
-  text-align: left;
   font-weight: bold;
   color: #333;
 }
@@ -188,5 +187,42 @@ label{
   }
   #product-list button {
     padding: 4px 8px;
+  }
+}
+
+.mensaje-pago-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.mensaje-pago-container.mostrar {
+  display: block;
+}
+
+#mensaje-pago {
+  font-size: 18px;
+  font-weight: bold;
+  color: black; /* Verde brillante */
+  text-align: center;
+}
+
+.mensaje-pago-container.desaparecer {
+  animation: desaparecer 2s forwards;
+}
+
+@keyframes desaparecer {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

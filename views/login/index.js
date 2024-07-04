@@ -13,12 +13,7 @@ formulario.addEventListener('submit', async (e) => {
         createNotificacion(true, 'Campos vacios');
         return;
     } else {
-        const objUser = {
-            email: emailInput.value,
-            password: passwordInput.value
-        }
-        //console.log(objUser)
-
+        
         try {
             const respuesta = await axios.get('/api/users/login',{
                 params:{
@@ -32,9 +27,9 @@ formulario.addEventListener('submit', async (e) => {
             
                if (respuesta.data.rol === 1) {
              //    console.log('ADMINISTRADOR');
-              window.location.href = '/admin/';
+              window.location.href = '/administrador-principal/';
             } else {
-              window.location.href = '/funcion/';
+              window.location.href = '/productos/';
                  console.log('CLIENTE');
              }
          

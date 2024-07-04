@@ -1,11 +1,9 @@
 
 const zapatoRouter = require('express').Router();
-const { request } = require('http');
 const zapato = require('../models/shoes');
 const multer = require('multer');
 const path = require('path');
 const user = require('../models/usuario');
-const { response } = require('../app');
 const jwt=require('jsonwebtoken');
 const userRouter = require('.');
 
@@ -75,99 +73,6 @@ zapatoRouter.post('/postVarios', async (request, response) =>{
 })
 
 
-
-/*userRouter.post('/carrito', async (req, res) => {
-  let ;
-  const { } = req.body;
-  // console.log(fechaReservaInicio,fechaReservaFinal);
-
-  // console.log(fechaReservaFinal,fechaReservaInicio);
-
-  try {
-  
-    let lavadoraDisponible = null;
-    const lavadoras = await lavadora.find();
-
-    for (const lavadoraObj of lavadoras) {
-      let reservaExiste = false;
-
-      const reservas = lavadoraObj.reservasObj;
-
-      for (const fecha in reservas) {
-        const compare = reservas[fecha];
-        for (const fechaCompare in compare) {
-          if (
-            (fechaReservaInicio >= compare.fechaInicio && fechaReservaInicio <= compare.fechaFinal) ||
-            (fechaReservaFinal >= compare.fechaInicio && fechaReservaFinal <= compare.fechaFinal) ||
-            (fechaReservaInicio <= compare.fechaInicio && fechaReservaFinal >= compare.fechaFinal)
-          ) {
-            reservaExiste = true;
-            break;
-          }
-        }
-
-        if (reservaExiste) {
-          break;
-        }
-      }
-
-      if (!reservaExiste) {
-        lavadoraDisponible = lavadoraObj;
-        break;
-      }
-    }
-
-    if (lavadoraDisponible) {
-      nrolavadora = lavadoraDisponible.nrolavadora;
-      const reservaKeys = Object.keys(lavadoraDisponible.reservasObj).sort();
-      let newReservaKey;
-
-      if (reservaKeys.length === 0) {
-        newReservaKey = 'reservaItem1';
-      } else {
-        const lastReservaKey = reservaKeys[reservaKeys.length - 1];
-        newReservaKey = reservaItem${parseInt(lastReservaKey.replace('reservaItem', '')) + 1};
-      }
-
-      console.log(newReservaKey);
-      const cookies = req.headers.cookie.split(';');
-      const tokenCookie = cookies.find(cookie => cookie.trim().startsWith('token='));
-      const token = tokenCookie && tokenCookie.trim().split('=')[1];
-      const decoded = jwt.verify(token, process.env.SECRET);
-
-      let nuevaReserva = {
-        [newReservaKey]: {
-          usuario:decoded.nombre,
-          reservaId: generateId,
-          estado: 'En revisión de pago',
-          fechaInicio: fechaReservaInicio,
-          fechaFinal: fechaReservaFinal,
-          pagoEstado: 'Pendiente',
-          usuarioId:decoded.userId ,
-          pagoId: generateId,
-          montoTotal: montoTotal
-        }
-      };
-
-      lavadoraDisponible.reservasObj[newReservaKey] = nuevaReserva[newReservaKey];
-       await lavadora.updateOne({ _id: lavadoraDisponible._id }, { $set: { reservasObj: lavadoraDisponible.reservasObj } });
-
-      res.json({
-        reservaId: generateId,
-        pagoId: generateId,
-        validate: false,
-        message: Reserva 
-      });
-    } else {
-      res.json({ message: 'Todas las lavadoras estan reservadas para esa fecha, tu sugiero seleccionar otra' ,validate:true});
-    }
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ message: 'Error al reservar la lavadora' });
-  }
-});*/
-
-
 const storage = multer.diskStorage({
     destination: path.join(__dirname.replace('controllers', "\\views"), 'img'),
     filename: function(req, file, cb) {
@@ -179,7 +84,6 @@ const storage = multer.diskStorage({
   const upload = multer({ storage: storage, limits: { fileSize: 3000000 } });
 
   
-
 
 
 
@@ -227,6 +131,9 @@ const storage = multer.diskStorage({
       console.log(error);
     }
   });
+
+
+
 
 module.exports = zapatoRouter
 

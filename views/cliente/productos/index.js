@@ -9,7 +9,7 @@ const productsContainer = document.getElementById('products-container');
 
     const generateProductPage = (shoe) => {
       const productHTML = ` 
-      <a href="/producto/?shoe=${encodeURIComponent(JSON.stringify(shoe))}">
+      <a href="/seleccionar/?shoe=${encodeURIComponent(JSON.stringify(shoe))}">
         <div class="product">
           <img src="${shoe.imagen}" alt="${shoe.nombre}">
            <h2>${shoe.nombre}</h2>
@@ -29,4 +29,15 @@ const productsContainer = document.getElementById('products-container');
   .catch(error => console.error('Error loading JSON data:', error));
 
 
-  
+  document.addEventListener('DOMContentLoaded',async ()=>{
+    try {
+      const verificar=await axios.get('/api/users/verificar')
+      if(verificar.data.validate==false){
+        window.location.href='/login/'
+      }
+      console.log(verificar);
+    } catch (error) {
+      console.log(error)
+    }
+    
+  })

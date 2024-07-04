@@ -1,9 +1,6 @@
 
 const urlParams = new URLSearchParams(window.location.search);
-let shoesStorage=localStorage.getItem('productos')
-if(!shoesStorage){
-  localStorage.setItem('productos', JSON.stringify([]));
-}
+
 const shoeParam = urlParams.get('shoe');
 const shoe = JSON.parse(decodeURIComponent(shoeParam));
 
@@ -57,19 +54,35 @@ enviarProducto.addEventListener('click',async(e) =>{
   }
 
 
-
+ const producto={
+  imagen:productImage.src,
+  nombre:productName.textContent,
+  precio:productPrice.value*productQuantity.value,
+  color:productColor.value,
+  talla:productSize.value,
+  cantidad:parseInt(productQuantity.value)
+ }
 
 try {
-    const carrito=await axios.post('/api/shoes/carrito',{
-      imagen:productImage.src,
-      nombre:productName.textContent,
-      precio:productPrice.value*productQuantity.value,
-      color:productColor.value,
-      talla:productSize.value,
-      cantidad:productQuantity.value
-    })
+    const carrito=await axios.post('/api/users/carrito',{producto})
+
+    
   console.log(carrito);
 } catch (error) {
   console.log(error);  
 }
+})
+
+
+document.addEventListener('DOMContentLoaded',async ()=>{
+  try {
+    const verificar=await axios.get('/api/users/verificar')
+    if(verificar.data.validate==false){
+      window.location.href='/login/'
+    }
+    console.log(verificar);
+  } catch (error) {
+    console.log(error)
+  }
+  
 })

@@ -4,7 +4,8 @@ const pagosTable = document.getElementById('pagos-aceptados');
 
 document.addEventListener('DOMContentLoaded',async()=> {
   try {
-    const response = await axios.get('/api/pagos/aceptados');
+    const response = await axios.get('/api/pagos/mostrar');
+    console.log(response);
     response.data.forEach(element => {
       let tr=document.createElement('tr')
       /*let productos=element.pagos.productos

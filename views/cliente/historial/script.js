@@ -3,25 +3,28 @@ const pagosContainer2 = document.getElementById('pagos-2');
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    const id = await axios.get('/api/users/consultar-user', {
-      params: {
-        token: localStorage.getItem('token')
-      }
-    });
-
-    const consultaId = await axios.get('/api/pagos/mostrarId', {
-      params: {
-        userId: id.data.id
-      }
-    });
-console.log(consultaId);
-    consultaId.data.forEach((element) => {
+    const verificar=await axios.get('/api/users/verificar')
+    if(verificar.data.validate==false){
+      window.location.href='/login/'
+    }
+    console.log(verificar);
+  } catch (error) {
+    console.log(error)
+  }
+  
+  
+  try {
+    const pendientes = await axios.get('/api/pagos/mostrarIdUser');
+    console.log(pendientes);
+  
+    pendientes.data.forEach((element) => {
       const productos = element.productos;
+      console.log(element.productos);
       productos.forEach((producto) => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
-          <td>${producto.nombre}</td>
-          <td>${producto.cantidad}</td>
+          <td>${producto.producto.nombre}</td>
+          <td>${producto.producto.cantidad} pares</td>
           <td>${element.totalAmount}$</td>
         `;
         pagosContainer.appendChild(tr);
@@ -31,28 +34,17 @@ console.log(consultaId);
     console.log(error);
   }
 
-  
-
   try {
-    const id = await axios.get('/api/users/consultar-user', {
-      params: {
-        token: localStorage.getItem('token')
-      }
-    });
-
-    const consultaId = await axios.get('/api/pagos/aceptadosID', {
-      params: {
-        userId: id.data.id
-      }
-    });
-console.log(consultaId);
-    consultaId.data.forEach((element) => {
+    const acedptados= await axios.get('/api/pagos/mostrarIdUserAceptado')
+    console.log(acedptados);
+    acedptados.data.forEach((element) => {
       const productos = element.productos;
+
       productos.forEach((producto) => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
-          <td>${producto.nombre}</td>
-          <td>${producto.cantidad}</td>
+          <td>${producto.producto.nombre}</td>
+          <td>${producto.producto.cantidad}</td>
           <td>${element.totalAmount}$</td>
         `;
         pagosContainer2.appendChild(tr);
@@ -61,5 +53,6 @@ console.log(consultaId);
   } catch (error) {
     console.log(error);
   }
-  })
+
+})
   

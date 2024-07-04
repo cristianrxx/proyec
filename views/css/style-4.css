@@ -234,3 +234,21 @@ button[type="button"]:hover {
     font-size: 20px;
   }
 }
+
+@media (max-width: 768px) {
+  .contenedor {
+    max-width: 300px;
+  }
+  .nav-bar {
+    padding: 10px 5px;
+  }
+  .boton {
+    margin: 1px;
+  }
+  #formulario {
+    padding: 2px;
+  }
+  .tabla {
+    font-size: 8px;
+  }
+}
