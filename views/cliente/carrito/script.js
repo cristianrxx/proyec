@@ -204,7 +204,6 @@ pagarBtn.addEventListener('click', () => {
 
 
 
-
 vaciarBtn.addEventListener('click',async ()=>{
 
   try {

@@ -1,6 +1,8 @@
 const navegacion = document.querySelector('#navegacion')
 const footer = document.querySelector('#aqui')
 
+
+
 const crearNavHome = ()=>{
   navegacion.innerHTML = ` 
   <button class="hamburger">
@@ -286,7 +288,7 @@ const crearNavUsuario = ()=>{
   <ul>
 <a href="/carrito/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Carrito</a>
   <a href="/historial/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Pagos</a>
-  <a id="btn-x" class=" cursor-pointer py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Cerrar sesión </a>
+  <a id="btn-x" class="btn-x cursor-pointer py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Cerrar sesión </a>
   </ul>
 </nav>
 
@@ -305,9 +307,9 @@ const crearNavUsuario = ()=>{
           class= "py-2 px-4 rounded-lg text-white hover:bg-teal-50 hover:text-black font-bold transition ease-in-out">Pagos</a>
 
       
-      <a
-      id="btn-x"
-          class="cursor-pointer py-2 px-4 rounded-lg hover:bg-teal-50 hover:text-black bg:text-black font-bold text-white transition ease-in-out">
+     <a
+      id="btn-c"
+          class="btn-c cursor-pointer py-2 px-4 rounded-lg hover:bg-teal-50 hover:text-black bg:text-black font-bold text-white transition ease-in-out">
          Cerrar sesión</a>
   </div>
 
@@ -380,7 +382,7 @@ const crearNavProducto = ()=>{
   <a href="/productos/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Inicio</a>
 <a href="/carrito/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Carrito</a>
   <a href="/historial/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Pagos</a>
-  <a id="btn-x" class=" cursor-pointer py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Cerrar sesión </a>
+  <a id="btn-x" class="btn-x cursor-pointer py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Cerrar sesión </a>
   </ul>
 </nav>
 
@@ -404,10 +406,10 @@ const crearNavProducto = ()=>{
           class= "py-2 px-4 rounded-lg text-white hover:bg-teal-50 hover:text-black font-bold transition ease-in-out">Pagos</a>
 
       
-      <a
-      id="btn-x"
-          class="cursor-pointer py-2 px-4 rounded-lg hover:bg-teal-50 hover:text-black bg:text-black font-bold text-white transition ease-in-out">
-         Cerrar sesión</a>
+      <button
+      id="btn-c"
+          class="btn-c cursor-pointer py-2 px-4 rounded-lg hover:bg-teal-50 hover:text-black bg:text-black font-bold text-white transition ease-in-out">
+         Cerrar sesión</button>
   </div>
 
 </div>
@@ -478,7 +480,7 @@ const crearNavCarrito = ()=>{
   <ul>
   <a href="/productos/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Inicio</a>
   <a href="/historial/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Pagos</a>
-  <a id="btn-x" class=" cursor-pointer py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Cerrar sesión </a>
+  <a id="btn-x" class="btn-x cursor-pointer py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Cerrar sesión </a>
   </ul>
 </nav>
 
@@ -499,10 +501,10 @@ const crearNavCarrito = ()=>{
           class= "py-2 px-4 rounded-lg text-white hover:bg-teal-50 hover:text-black font-bold transition ease-in-out">Pagos</a>
 
       
-      <a
-      id="btn-x"
-          class="cursor-pointer py-2 px-4 rounded-lg hover:bg-teal-50 hover:text-black bg:text-black font-bold text-white transition ease-in-out">
-         Cerrar sesión</a>
+     <button
+      id="btn-c"
+          class="btn-c cursor-pointer py-2 px-4 rounded-lg hover:bg-teal-50 hover:text-black bg:text-black font-bold text-white transition ease-in-out">
+         Cerrar sesión</button>
   </div>
 
 </div>
@@ -553,6 +555,7 @@ footer.innerHTML=`
 </div>
      
 `
+
 }
 
 const crearNavDashboard= ()=>{
@@ -573,7 +576,7 @@ const crearNavDashboard= ()=>{
   <ul>
   <a href="/productos/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Inicio</a>
 <a href="/carrito/" class=" py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Carrito</a>
-  <a id="btn-x" class=" cursor-pointer py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Cerrar sesión </a>
+  <a id="btn-x" class="btn-x cursor-pointer py-2 px-4 rounded-lg font-bold text-white transition ease-in-out">Cerrar sesión </a>
   </ul>
 </nav>
 
@@ -593,10 +596,10 @@ const crearNavDashboard= ()=>{
       <a href="/carrito/"
           class= "py-2 px-4 rounded-lg text-white hover:bg-teal-50 hover:text-black font-bold transition ease-in-out">Carrito</a>
       
-      <a
-      id="btn-x"
-          class="cursor-pointer py-2 px-4 rounded-lg hover:bg-teal-50 hover:text-black bg:text-black font-bold text-white transition ease-in-out">
-         Cerrar sesión</a>
+     <button
+      id="btn-c"
+          class="btn-c cursor-pointer py-2 px-4 rounded-lg hover:bg-teal-50 hover:text-black bg:text-black font-bold text-white transition ease-in-out">
+         Cerrar sesión</button>
   </div>
 
 </div>
@@ -659,10 +662,11 @@ if(window.location.pathname === '/'){
 }else if(window.location.pathname === '/registro/'){
   crearNavRegistro()
 }else if(window.location.pathname === '/seleccionar/'){
-  crearNavUsuario()
+  crearNavProducto()
+  
 
 }else if(window.location.pathname === '/productos/'){
-  crearNavProducto()
+  crearNavUsuario()
 
 }else if(window.location.pathname === '/carrito/'){
   crearNavCarrito()
@@ -693,3 +697,26 @@ navBtn.addEventListener('click', e=>{
 }
 })
 
+const btnCerrarSesion = document.getElementById('btn-x');
+
+btnCerrarSesion.addEventListener('click', async () =>{
+  const response = await axios.post('/api/users/logout');
+  if (response.status === 200) {
+    console.log('Logout correcto!');
+    location.reload()
+  } else {
+    console.log('Logout fallo:', response.status);
+  }
+})
+
+const btnCerrarSesion2 = document.getElementById('btn-c');
+
+btnCerrarSesion2.addEventListener('click', async () =>{
+  const response = await axios.post('/api/users/logout');
+  if (response.status === 200) {
+    console.log('Logout correcto!');
+    location.reload()
+  } else {
+    console.log('Logout fallo:', response.status);
+  }
+})

@@ -228,5 +228,18 @@ userRouter.post("/vaciarCarrito", async (req, res) => {
   }
 }); 
 
+userRouter.post("/logout", async (req, res) => {
+  try {
+    // Clear the cookie
+    res.clearCookie("token");
+
+    // Return a response indicating that the user has been logged out
+    res.status(200).json({ message: "Sesión cerrada exitosamente" ,validate:false});
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error al cerrar sesión" ,validate:true});
+  }
+});
+
 module.exports = userRouter
 

@@ -35,9 +35,10 @@ const productsContainer = document.getElementById('products-container');
       if(verificar.data.validate==false){
         window.location.href='/login/'
       }
-      console.log(verificar);
+
     } catch (error) {
       console.log(error)
     }
     
   })
+   
