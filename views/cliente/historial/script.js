@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       modal.className = 'hidden';
       modal.innerHTML = `
         <!-- Contenido del modal -->
-        <div class="fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full bg-gray-500 bg-opacity-50 overflow-y-auto overflow-x-hidden">
+        <div class="fixed pt-4 pr-4 pl-4 top-0 right-0 left-0 lg:pt-12 lg:pl-16 lg:pr-16 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full bg-gray-500 bg-opacity-50 overflow-y-auto overflow-x-hidden">
           <!-- Modal content -->
           <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
             <h2 class="text-lg text-center font-bold">Datos de la compra:</h2>
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       modal.className = 'hidden';
       modal.innerHTML = `
         <!-- Contenido del modal -->
-        <div class="fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full bg-gray-500 bg-opacity-50 overflow-y-auto overflow-x-hidden">
+        <div class="fixed pt-4 pr-4 pl-4 top-0 right-0 left-0 lg:pt-12 lg:pl-16 lg:pr-16 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full bg-gray-500 bg-opacity-50 overflow-y-auto overflow-x-hidden">
           <!-- Modal content -->
           <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
             <h2 class="text-lg text-center font-bold">Datos de la compra:</h2>

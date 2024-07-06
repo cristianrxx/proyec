@@ -71,7 +71,7 @@
   .slider .slider-track {
     display: flex;
     animation: scroll 80s linear infinite;
-    width: calc(150px * 52); /* Assuming 52 images */
+    width: calc(150px * 52); 
   }
   
   .slide img{
@@ -79,10 +79,9 @@
     width: 100%;
     margin: 10px;
   }
-  
-  /* Option 1: Fixed Width */
+
   .slider .slide img {
-    width: 120px; /* Adjust as needed */
+    width: 120px; 
   }
   
   /* Option 2: Maintain Aspect Ratio */
@@ -153,7 +152,7 @@
       }
       
 .text-t{
-  font-size: 80px;
+  font-size: 65px;
   text-align: center;
   font-weight: bold;
   text-decoration:overline;

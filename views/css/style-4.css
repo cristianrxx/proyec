@@ -6,12 +6,30 @@ body {
 }
 
 .contenedor {
-  width: 80%;
-  margin: 0 auto;
+  width: 90%;
+  margin: 40px auto;
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px){
+  body{
+    background-color: white;
+  }
+  .contenedor {
+    width: 100%;
+    padding: 8px;
+    margin:auto;
+    }
+    .tabla td{
+      font-size: 10px;
+    }
+    th{
+      margin: 0;
+      padding: 0%;
+    }
 }
 
 h1 {
@@ -48,15 +66,6 @@ th {
   height: 50px;
   object-fit: cover;
 }
-.contenedor {
-  width: 80%;
-  margin: 40px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 .tabla {
   width: 100%;
   border-collapse: collapse;
@@ -85,16 +94,7 @@ th {
   background-color: #3e8e41;
 }
 
-/* formulario */
 
-/* style.css */
-
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-}
 
 .boton {
   width: 80%;
