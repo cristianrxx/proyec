@@ -139,5 +139,17 @@ const agregarZapato = async () =>{
   }
 }
 
+document.addEventListener('DOMContentLoaded',async ()=>{
+  try {
+    const verificar=await axios.get('/api/users/verificar')
+    if(verificar.data.validate==false){
+      window.location.href='/login/'
+    }
+    console.log(verificar);
+  } catch (error) {
+    console.log(error)
+  }
+  
+})
 
   

@@ -18,6 +18,11 @@
         <a href="/administrador-principal/">Productos</a>
         <a href="/administrador-historial/">Historial de pagos</a>
         <a href="/administrador-pagos/">Pagos por revisar</a>
+        <a
+        href=""
+        id="btn-c"
+            class="btn-c cursor-pointer">
+           Cerrar sesión</a>
       </nav>
   
   <h1>Productos</h1>
@@ -40,5 +45,18 @@
     </div>
 
 <script src="script.js"></script>
+<script>
+  const btnCerrarSesion2 = document.getElementById('btn-c');
+
+btnCerrarSesion2.addEventListener('click', async () =>{
+const response = await axios.post('/api/users/logout');
+if (response.status === 200) {
+  console.log('Logout correcto!');
+  location.reload()
+} else {
+  console.log('Logout fallo:', response.status);
+}
+})
+</script>
 </body>
 </html>
