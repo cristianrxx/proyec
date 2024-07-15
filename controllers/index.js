@@ -53,12 +53,12 @@ userRouter.get("/verificar", async(req, res) => {
 
     
 
-    // Autenticado correctamente, proceder con la solicitud
+
     res.status(200).json({ message: 'TOKEN ACTIVO' ,validate:true});
   } catch (err) {
     if(err.name=='TokenExpiredError'){
       res.json({message:'Su sexion ha expirado, por favor, inicie sesion',validate:false})
-      // const updatedUser = await user.findOneAndUpdate({ email: email }, { $set: { verificar: false } }, { new: true });
+   
 
     }else{
       console.log(err);
@@ -73,7 +73,6 @@ userRouter.get("/verificar", async(req, res) => {
 userRouter.get("/login", async (req, res) => {
   console.log('working login');
   const { email, password } = req.query
-  console.log(email,password);
   try {
     const consulta = await user.findOne({
       email: email,

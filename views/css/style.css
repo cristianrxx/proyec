@@ -60,12 +60,13 @@
 
 
 .slider {
-    width: 85vw;
+    width: 60vw;
     height: auto;
-    margin: auto;
     overflow: hidden;
-    margin-bottom: 15rem;
-    margin-top: 15rem;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
   
   .slider .slider-track {
@@ -104,7 +105,9 @@
 
 
       .banner1 {
-        background-image: linear-gradient(to bottom, #4686813a, #00837856);
+        box-shadow: 1px 1px 15px rgba(128, 128, 128, 0.452);
+        border-top: 5px solid #0d6456;
+        border-bottom: 5px solid #0d6456;;
         background-size: 100% 250px;
         background-position: 0% 100%;
         height: 300px;
@@ -114,7 +117,7 @@
         padding: 20px;
         margin-left: 2rem;
         margin-right: 2rem;
-        margin-bottom: 25rem
+        margin-bottom: 15rem;
       }
       
       .banner-content {
@@ -157,4 +160,125 @@
   font-weight: bold;
   text-decoration:overline;
   color: #000000;
+}
+
+
+.contenido {
+  box-shadow: 1px 1px 15px rgba(128, 128, 128, 0.452);
+  border-bottom-right-radius: 10%;
+  border-top-right-radius: 10%;
+  border-right: 5px solid #0d6456;
+  border-top: 5px solid #0d6456;
+  border-bottom: 5px solid #0d6456;;
+}
+
+.contenido p{
+  text-align: center;
+  font-weight: bold;
+}
+
+.container-x{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 2rem;
+}
+.imgn1{
+  width: 100%;
+  border-radius: 6%;
+  padding-right: 10px;
+  height: 560px;
+}
+.text1{
+  margin-bottom: 15rem;
+}
+.container-x h2{
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-right: 60px;
+  font-size: 35px;
+  line-height: 40px;
+}
+.container-x p{
+  font-family: sans-serif;
+  margin-left: 50px;
+  font-size: 19px;
+  margin-top: 1rem;
+  margin-bottom: 30px;
+  margin-right: 40px;
+}
+.container-x a{
+  margin-left: 60px;
+  background-color: yellow;
+  cursor: pointer;
+  border-radius: 10%;
+  padding: 1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: Poppins, sans-serif;
+}
+.container-x2{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container-x,.container-x2 {
+     grid-template-columns: 1fr; /* Cambiamos a una columna */
+     column-gap: 0; /* Eliminamos el espacio entre columnas */
+   }
+   
+  .imgn1 {
+    display: none;
+   }
+   .imgn2{
+    display: none;
+   }
+   
+  .contenido {
+     border-radius: 10px; /* Ajustamos el radio de la esquina */
+     padding: 1rem; /* Ajustamos el padding */
+   }
+   
+  .container-x h2,.container-x p,.container-x a {
+     margin-left: 20px; 
+     margin-right: 20px; 
+   }
+   
+  .container-x a {
+     padding: 0.5rem; /* Ajustamos el padding del botón */
+   }
+ }
+
+
+
+/* Estilos para pantallas con un ancho de 768px o menos */
+@media (max-width: 768px) {
+  .slider {
+     width: 80vw; /* Ajustamos el ancho del slider */
+     margin-left: 1vw; /* Ajustamos el margen izquierdo */
+     margin-right: 1vw; /* Ajustamos el margen derecho */
+   }
+   
+  .slider.slider-track {
+     width: calc(100px * 52); /* Ajustamos el ancho del track */
+   }
+   
+  .slide img {
+     width: 80px; /* Ajustamos el ancho de la imagen */
+     margin: 5px; /* Ajustamos el margen de la imagen */
+   }
+ }
+ .imgn2{
+  width: 100%;
+  padding-right: 5px;
+  height: 400px;
+}
+ 
+.inicial{
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
